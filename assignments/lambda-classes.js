@@ -88,6 +88,23 @@ class Student extends Person {
     }
 }
 
+let seun = new student({
+    name: 'seun',
+    location: 'abuja',
+    age: 21,
+    className: 'Webeu3',
+    favSubjects: ['Html', 'CSS', 'JavaScript'],
+})
+
+let feranmi = new student({
+    name: 'feranmi',
+    location: 'Ikeja',
+    age: 40,
+    className: 'Webeu3',
+    favSubjects: ['Html', 'PHP', 'JavaScript'],
+})
+
+
 
 class ProjectManagers extends Instructor {
     constructor(InstructorObj, ProjectManagersObj) {
@@ -101,8 +118,8 @@ class ProjectManagers extends Instructor {
 
     };
 
-    debugsCode(Student.name) {
-        return `${name} debugs ${student.name} 's code on {subject}`
+    debugsCode(Student, subject) {
+        return `${name} debugs ${student.name} 's code on ${subject}`
     }
 }
 
@@ -128,6 +145,4 @@ let Jussie = new ProjectManagers({
     catchPhrase: 'WooWoo',
     gradClassName: 'CS1',
     favInstructor: 'Gabe',
-
-
 })
