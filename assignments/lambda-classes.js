@@ -42,13 +42,13 @@ class Instructor extends Person {
     }
 
 
-    grade(student, subject) {
+    grade(Student, subject) {
         return `${student.name} receives a perfect score on ${subject}`
     }
 }
 
 
-const fred = new Instructor({
+let fred = new Instructor({
     name: 'Fred',
     location: 'Bedrock',
     age: 37,
@@ -58,7 +58,7 @@ const fred = new Instructor({
 });
 
 
-const duro = new Instructor({
+let duro = new Instructor({
     name: 'duro',
     location: 'Lagos',
     age: 30,
@@ -67,7 +67,7 @@ const duro = new Instructor({
     catchPhrase: `Which kain life`
 });
 
-class student extends Person {
+class Student extends Person {
     constructor(PersonObj, studentObj) {
         super(PersonObj)
         this.previousBackground = studentObj.previousBackground;
@@ -75,17 +75,59 @@ class student extends Person {
         this.favSubjects = studentObj.favSubjects
     }
     listsSubjects() {
-        return student.favSubjects;
+        return Student.favSubjects;
     };
 
     PRAssignment(subject) {
-        return `${student.name} has submitted a PR for ${subject}`
+        return `${Student.name} has submitted a PR for ${subject}`
     }
 
 
     sprintChallenge() {
-        `${student.name} has begun sprint chaallenge on ${subject}`
+        `${Student.name} has begun sprint chaallenge on ${subject}`
     }
 }
 
 
+class ProjectManagers extends Instructor {
+    constructor(InstructorObj, ProjectManagersObj) {
+        super(InstructorObj)
+        this.gradClassName = ProjectManagers.gradClassName;
+        this.favInstructor = ProjectManagers.favInstructor;
+    };
+
+    standup(slackChannel) {
+        `${name} announces to ${channel}, @channel standy times`
+
+    };
+
+    debugsCode(Student.name) {
+        return `${name} debugs ${student.name} 's code on {subject}`
+    }
+}
+
+let Aaron = new ProjectManagers({
+    name: 'Aaron',
+    location: 'California',
+    age: 33,
+    favLanguage: 'Python',
+    specialty: 'Redux',
+    catchPhrase: 'WooWoo',
+    gradClassName: 'CS1',
+    favInstructor: 'Sean',
+
+})
+
+let Jussie = new ProjectManagers({
+
+    name: 'Jussie',
+    location: 'Texas',
+    age: 30,
+    favLanguage: 'Java',
+    specialty: 'Redux',
+    catchPhrase: 'WooWoo',
+    gradClassName: 'CS1',
+    favInstructor: 'Gabe',
+
+
+})
