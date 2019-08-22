@@ -4,7 +4,7 @@
 
 // 1. Copy and paste your code or the solution from yesterday
 
-class Person {
+class Human{
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -59,19 +59,7 @@ class Car {
 }
 const Vehicle = new Car();
 
-class Personal {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-
-
-    greet() {
-
-        return `Hi, my name is ${this.name} , and i am ${this.age}`
-    };
-}
-class Child extends Person {
+class Child extends Human{
     constructor(name, age, play) {
         super(name, age);
         this.favoriteGame = play
@@ -120,47 +108,6 @@ class Nee {
 let mary = new Nee('Mary', 'poppins');
 
 console.log(mary.getFullName());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

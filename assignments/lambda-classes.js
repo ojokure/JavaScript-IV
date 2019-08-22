@@ -2,9 +2,9 @@
 
 class Person {
     constructor(PersonObj) {
-        this.name = personObj.name;
-        this.age = personObj.age;
-        this.location = personObj.location;
+        this.name = PersonObj.name;
+        this.age = PersonObj.age;
+        this.location = PersonObj.location;
     }
 
     speak() {
@@ -17,10 +17,10 @@ let samuel = new Person({
     age: 20,
     location: 'Maryland',
 
-})
+});
 
 let rory = new Person({
-    name: 'binjo',
+    name: 'rory',
     age: 30,
     location: 'cowrywise',
 
@@ -29,9 +29,8 @@ let rory = new Person({
 
 
 class Instructor extends Person {
-    constructor(PersonObj, InstructorObj) {
-        super(PersonObj);
-
+    constructor(InstructorObj) {
+        super(InstructorObj);
         this.specialty = InstructorObj.specialty;
         this.favLanguage = InstructorObj.favLanguage;
         this.catchphrase = InstructorObj.catchPhrase;
@@ -68,8 +67,8 @@ let duro = new Instructor({
 });
 
 class Student extends Person {
-    constructor(PersonObj, studentObj) {
-        super(PersonObj)
+    constructor(studentObj) {
+        super(studentObj)
         this.previousBackground = studentObj.previousBackground;
         this.className = studentObj.className;
         this.favSubjects = studentObj.favSubjects
@@ -88,7 +87,7 @@ class Student extends Person {
     }
 }
 
-let seun = new student({
+let seun = new Student({
     name: 'seun',
     location: 'abuja',
     age: 21,
@@ -96,7 +95,7 @@ let seun = new student({
     favSubjects: ['Html', 'CSS', 'JavaScript'],
 })
 
-let feranmi = new student({
+let feranmi = new Student({
     name: 'feranmi',
     location: 'Ikeja',
     age: 40,
@@ -107,8 +106,8 @@ let feranmi = new student({
 
 
 class ProjectManagers extends Instructor {
-    constructor(InstructorObj, ProjectManagersObj) {
-        super(InstructorObj)
+    constructor(ProjectManagers) {
+        super(ProjectManagers)
         this.gradClassName = ProjectManagers.gradClassName;
         this.favInstructor = ProjectManagers.favInstructor;
     };
